@@ -22,15 +22,15 @@ then
     exit
 fi
 
-if [ "$public_key" = 1 ]
-then
-    cp ~/.aws/key/public-key.csv ./key/
-fi
-
 mkdir assets && touch assets/.gitkeep
 mkdir data && touch data/.gitkeep
 mkdir key && touch key/.gitkeep
 mkdir module && touch module/.gitkeep
+
+if [ "$public_key" = 1 ]
+then
+    cp ~/.aws/key/public-key.csv ./key/
+fi
 
 echo \
 "import os
