@@ -1,8 +1,3 @@
-mkdir assets && touch assets/.gitkeep
-mkdir data && touch data/.gitkeep
-mkdir key && touch key/.gitkeep
-mkdir module && touch module/.gitkeep
-
 while [ "$1" != "" ]; 
 do
     case $1 in
@@ -22,10 +17,20 @@ do
     shift
 done
 
+if [ "$project_name" = "" ]
+then
+    exit
+fi
+
 if [ "$public_key" = 1 ]
 then
     cp ~/.aws/key/public-key.csv ./key/
 fi
+
+mkdir assets && touch assets/.gitkeep
+mkdir data && touch data/.gitkeep
+mkdir key && touch key/.gitkeep
+mkdir module && touch module/.gitkeep
 
 echo \
 "import os
@@ -39,5 +44,3 @@ echo \
 " > ./init.py
 
 touch main.py
-
-echo $project_name
