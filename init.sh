@@ -45,4 +45,8 @@ echo \
 
 touch main.py
 
+cd ..
+mv Standard-Template $project_name
+cd $project_name
 rm -rf ./init.sh
+
