@@ -30,16 +30,16 @@
     mkdir assets && touch assets/.gitkeep
     mkdir data && touch data/.gitkeep
     mkdir key && touch key/.gitkeep
-    mkdir module && touch module/.gitkeep
     cp $home_path/SEOHASONG/.gitignore .
     touch main.py
     echo "from module import init" > init.py
+    mkdir module_
     echo \
 "import os
 
 os.system('git submodule init')
 os.system('git submodule update')"\
-    > module/init.py
+    > module_/init.py
     
     if [ "$public_key" = 1 ]
     then
