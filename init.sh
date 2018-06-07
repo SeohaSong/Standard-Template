@@ -45,8 +45,9 @@ echo \
 
 touch main.py
 
+rm -rf init.sh
+rm -rf .git
+
 cd ..
 mv Standard-Template $project_name
-cd $project_name
-rm -rf ./init.sh
 
