@@ -52,4 +52,7 @@
     cd ..
     mv Standard-Template $project_name
 )
-cd ..
+if [ "$project_name" != "" ]
+then
+    cd ..
+fi
