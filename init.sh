@@ -53,4 +53,7 @@
     mv Standard-Template $project_name
 )
 
-cd ..
+if [ -d "init.py"]
+then
+    cd ..
+fi
