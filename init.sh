@@ -33,6 +33,7 @@
     cp $home_path/SEOHASONG/.gitignore .
     touch main.py
     echo "from module_ import init" > init.py
+    echo "# $1" > README.md
     mkdir module_
     echo \
 "import os
