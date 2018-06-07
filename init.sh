@@ -55,5 +55,5 @@
 
 if [ -f "init.py" ]
 then
-    cd ..
+    cd .
 fi
