@@ -34,15 +34,13 @@
     fi
 
     echo \
-    "import os
+"import os
 
-    os.system('git submodule init')
-    os.system('git submodule update')"\
+os.system('git submodule init')
+os.system('git submodule update')"\
     > module/init.py
 
-    echo \
-    "from module import init"\
-    > init.py
+    echo "from module import init" > init.py
 
     touch main.py
 
