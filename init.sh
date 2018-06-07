@@ -48,7 +48,7 @@ os.system('git submodule update')"\
     rm -rf .git
 
     cd ..
-    mv template.python $project_name
+    mv template.project $project_name
 )
 
 if [ -f "init.py" ]
