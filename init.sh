@@ -50,10 +50,10 @@
     rm -rf .git
 
     cd ..
-    mv Standard-Template $project_name
+    mv template.python $project_name
 )
 
-if [ -d "init.py"]
+if [ -f "init.py" ]
 then
     cd ..
 fi
