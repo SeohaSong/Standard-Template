@@ -43,7 +43,7 @@ os.system('git submodule update')"\
     
     if [ "$public_key" = 1 ]
     then
-        cp ~/.aws/key/public-key.csv key/
+        cp $home_path/.aws/key/public-key.csv key/
     fi
 
     rm -rf init.sh .git
